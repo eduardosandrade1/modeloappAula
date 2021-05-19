@@ -13,23 +13,23 @@
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Nome</ion-label>
-    <ion-input placeholder="Eduardo da Silva Andrade"></ion-input>
+    <ion-input placeholder="Eduardo da Silva Andrade" [(ngModel)]="nome"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Email</ion-label>
-    <ion-input placeholder="eduardo@dev.io"></ion-input>
+    <ion-input type="email" placeholder="eduardo@dev.io" [(ngModel)]="email"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Celular</ion-label>
-    <ion-input placeholder="(00) 0 0000-0000"></ion-input>
+    <ion-input type="tel" placeholder="(00) 0 0000-0000" [(ngModel)]="celular"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">Estado</ion-label>
-    <ion-input placeholder="São Paulo"></ion-input>
+    <ion-input placeholder="São Paulo" [(ngModel)]="estado"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">CPF</ion-label>
-    <ion-input placeholder="000.000.000-00"></ion-input>
+    <ion-input type="number " placeholder="000.000.000-00" [(ngModel)]="cpf"></ion-input>
   </ion-item>
   <ion-item>
     <ion-buttons slot="end">

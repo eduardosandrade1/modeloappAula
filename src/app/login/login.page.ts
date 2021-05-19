@@ -8,15 +8,19 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
+  usuario:string = "";
+  senha:string = "";
   constructor(private blockMenu:MenuController, private router:Router) { }
 
   ngOnInit() {
     this.blockMenu.enable(false)
   } 
   login(){
-    this.router.navigate(['add-usuario'])
-    this.blockMenu.enable(true)
+    if(this.usuario == "eduardo" && this.senha == "123400"){
+      this.router.navigate(['folder/'+this.usuario])
+      this.blockMenu.enable(true)
+    };
+
   }
 
 }
