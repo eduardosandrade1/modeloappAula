@@ -15,8 +15,8 @@ export class LoginPage implements OnInit {
   ngOnInit() {
     this.blockMenu.enable(false)
   } 
-  login(){
-    if(this.usuario == "eduardo" && this.senha == "123400"){
+  login(usuario:any, senha:any){
+    if(usuario == "eduardo" && senha == ""){
       this.router.navigate(['folder/'+this.usuario])
       this.blockMenu.enable(true)
     };

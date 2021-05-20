@@ -3,7 +3,8 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title>New User</ion-title>
+    <ion-title *ngIf="id < 1">New User</ion-title>
+    <ion-title *ngIf="id > 0">Updated User</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -24,16 +25,21 @@
     <ion-input type="tel" placeholder="(00) 0 0000-0000" [(ngModel)]="celular"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="stacked">Estado</ion-label>
-    <ion-input placeholder="São Paulo" [(ngModel)]="estado"></ion-input>
+    <ion-label position="stacked">Cidade</ion-label>
+    <ion-input placeholder="São Paulo" [(ngModel)]="cidade"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked">CPF</ion-label>
     <ion-input type="number " placeholder="000.000.000-00" [(ngModel)]="cpf"></ion-input>
   </ion-item>
-  <ion-item>
+  <ion-item *ngIf="id < 1">
     <ion-buttons slot="end">
-      <ion-button expand="block" color="primary">Próximo</ion-button>
+      <ion-button expand="block" color="primary" (click)="cadastrar()">Cadastrar</ion-button>
     </ion-buttons>
+  </ion-item>
+  <ion-item *ngIf="id > 0">
+      <ion-buttons slot="end">
+        <ion-button expand="block" color="primary" (click)="update()">Atualizar</ion-button>
+      </ion-buttons>
   </ion-item>
 </ion-content>
