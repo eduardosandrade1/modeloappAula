@@ -8,8 +8,8 @@ import { PostService } from 'src/services/post.service';
   styleUrls: ['./lista-usuarios.page.scss'],
 })
 export class ListaUsuariosPage implements OnInit {
-  nome:string = "";
-  email:strong
+  nome:string   = "";
+  email:string  = "";
   // importa o router para poder redirecionar
   constructor(private router:Router, private service:PostService, private actRoute:ActivatedRoute) { }
 
